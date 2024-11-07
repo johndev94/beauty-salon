@@ -47,9 +47,10 @@ body img{border:none}
     height: 6em;
     padding: 1.5em;
     margin-right: auto; /* Pushes the logo to the left within the ul */
-    margin-left: 20px;
+    margin-left: 35px;
     will-change: filter;
     transition: filter 300ms;
+    transform: scaleX(-1);
 }
 
 
