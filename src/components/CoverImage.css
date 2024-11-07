@@ -1,0 +1,48 @@
+.cover-image-container {
+    position: flex;
+    width: 100%;
+    height: 500px; /* Adjust this height as needed */
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat; /* Ensure image doesn't repeat */
+  }
+  
+  .cover-image-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 3000px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #bannerText h1{text-align:center;
+    color:#fff;font-size:60px;
+    font-weight:700;
+    font-family:'Barlow Condensed',
+    sans-serif;
+    text-shadow:1px 1px 2px #000
+  }
+
+
+  .cover-bottom-border{
+    width:100%; 
+    max-width: 100%; 
+    height: auto;
+    margin-top: -18px;
+    margin-bottom: 20px;
+  }
+
+  
+  .cover-image-text {
+    color: #fff; /* White text for contrast */
+    font-size: 24px; /* Adjust as needed */
+    text-align:end;
+    padding: 20px;
+    max-width: 100%;
+  }
+  
