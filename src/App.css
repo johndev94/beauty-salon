@@ -12,6 +12,18 @@ body{margin:0;padding:0;text-align:left;background:#fff}
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+p{
+  font-size: 1.2em;
+  color: #333; 
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate; 
+
+
+}
 
 @keyframes logo-spin {
   from {
