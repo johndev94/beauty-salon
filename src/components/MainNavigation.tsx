@@ -27,8 +27,8 @@ const MainNavigation: React.FC = () => {
         </li>
         <li>
           Tel:{" "}
-          <a id="number" href="tel:+4402830267606">
-            +44 (0)28 30 267606
+          <a id="number" href="tel:+353 83 137 13788">
+          +353 (0) 83 137 13788
           </a>
         </li>
       </ul>
