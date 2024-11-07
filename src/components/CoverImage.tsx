@@ -1,5 +1,6 @@
 import React from "react";
 import "./CoverImage.css"; // Include your CSS file for styles
+import Button from "./button/button";
 
 interface CoverImageProps {
   imageSrc: string;
@@ -19,16 +20,12 @@ const CoverImage: React.FC<CoverImageProps> = ({
         style={{ backgroundImage: `url(${imageSrc})` }}
       >
         <div className="cover-image-overlay">
-          <div id="bannerText"><h1>{altText}</h1></div>
+          <div id="bannerText">
+            <h1>{altText}</h1>
+            <Button text="Book Now" onClick={() => alert("Book Now")} />
+          </div>
         </div>
       </div>
-      <img
-        className="cover-bottom-border"
-        src="src/assets/images/banner-border.png"
-        width="1161"
-        height="81"
-        alt="Banner border"
-      ></img>
     </>
   );
 };

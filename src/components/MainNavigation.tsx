@@ -1,6 +1,7 @@
 import React from "react";
 import "./MainNavigation.css";
-import icon from "../assets/images/icon.png"; // Adjust path as necessary
+//import icon from "../assets/images/icon.png"; // Adjust path as necessary
+import icon from "../assets/images/logo.png"; // Adjust path as necessary
 
 const MainNavigation: React.FC = () => {
   return (

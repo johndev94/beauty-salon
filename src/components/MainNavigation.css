@@ -34,6 +34,7 @@ body img{border:none}
     align-items: center;
     width: 100%;
     justify-content: flex-end; /* Aligns the ul contents to the right */
+    
 }
 
 #dropdownnav #number {
@@ -50,7 +51,7 @@ body img{border:none}
     margin-left: 35px;
     will-change: filter;
     transition: filter 300ms;
-    transform: scaleX(-1);
+    /* transform: scaleX(-1); */
 }
 
 
