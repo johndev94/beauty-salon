@@ -12,9 +12,6 @@ const MainNavigation: React.FC = () => {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/about-us">Team</a>
-        </li>
-        <li>
           <a href="/treatments">Treatments</a>
         </li>
         <li>
