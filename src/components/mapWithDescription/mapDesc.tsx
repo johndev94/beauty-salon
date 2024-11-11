@@ -10,7 +10,7 @@ interface MapDescProps {
 
 const MapDesc: React.FC<MapDescProps> = ({ lat, lng, description }) => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyCJ8qnPDrfjvFRnQcUqQdiacN1dZzVNYzo", // Replace with your Google Maps API key
+    googleMapsApiKey: "", // Replace with your Google Maps API key
   });
 
   if (!isLoaded) {
