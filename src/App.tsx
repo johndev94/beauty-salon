@@ -6,6 +6,7 @@ import Button from "./components/button/button";
 import ImageWithDescription from "./components/ImageWithDescription/ImageWithDescription";
 import MapWithDescription from "./components/mapWithDescription/mapDesc";
 import Footer from "./components/footer/Footer";
+import border from "./assets/images/banner-border.png";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <CoverImage altText="Book your appointment today" />
       <img
         className="cover-bottom-border"
-        src="src/assets/images/banner-border.png"
+        src={border}
         width="100%"
         height="120"
         alt="Banner border"
