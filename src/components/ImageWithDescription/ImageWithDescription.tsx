@@ -1,6 +1,6 @@
 import React from "react";
 import "./ImageWithDescription.css";
-import cos1 from "../src/assets/images/cos1.jpg";
+import cos1 from "../../assets/images/cos1.jpg";
 
 interface ImageWithDescriptionProps {
   altText: string;
