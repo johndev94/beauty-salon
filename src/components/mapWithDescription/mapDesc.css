@@ -1,0 +1,29 @@
+.map-with-description {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 700px;
+  }
+  
+  .map-container {
+    width: 50%; 
+    height: 100%; /* Adjusts the height to fill the parent container */
+  }
+  
+  .description {
+    margin-top: 30px;
+    width: 50%; /* Takes up the other half of the width */
+    padding: 2em;
+    height: 550px;
+    font-size: 1.2em;
+    color: #333;
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+    justify-content: center; /* Centers the content horizontally */
+    text-align: center; /* Ensures text inside is centered horizontally */
+    background-color: rgb(244, 244, 244);
+    border-left: 15px solid #93731f;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
