@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import "./MultiPanels.css";
+import cos1 from "../assets/images/cos1.jpg";
+import cos2 from "../assets/images/cos2.jpg";
+import cos3 from "../assets/images/cos3.jpg";
 
 interface PanelProps {
     image: string;
@@ -19,9 +22,9 @@ const Panel: React.FC<PanelProps> = ({ image, title, content }) => {
 
 const MultiPanels: React.FC = () => {
     const [panels] = useState<PanelProps[]>([
-        { title: 'Facial Treatments', content: '', image: 'src/assets/images/cos1.jpg' },
-        { title: 'Injectables & Enhancements', content: '', image: 'src/assets/images/cos3.jpg' },
-        { title: 'Skin Health & Rejuvenation', content: '', image: 'src/assets/images/cos2.jpg' },
+        { title: 'Facial Treatments', content: '', image: cos1 },
+        { title: 'Injectables & Enhancements', content: '', image: cos3 },
+        { title: 'Skin Health & Rejuvenation', content: '', image: cos2 },
     ]);
 
     return (

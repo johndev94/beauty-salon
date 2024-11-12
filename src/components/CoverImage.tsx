@@ -1,22 +1,19 @@
 import React from "react";
 import "./CoverImage.css"; // Include your CSS file for styles
 import Button from "./button/button";
+import cover from "../assets/images/cover.jpg";
 
 interface CoverImageProps {
-  imageSrc: string;
   altText: string;
   children?: React.ReactNode;
 }
 
-const CoverImage: React.FC<CoverImageProps> = ({
-  imageSrc,
-  altText
-}) => {
+const CoverImage: React.FC<CoverImageProps> = ({ altText }) => {
   return (
     <>
       <div
         className="cover-image-container"
-        style={{ backgroundImage: `url(${imageSrc})` }}
+        style={{ backgroundImage: `url(${cover})` }}
       >
         <div className="cover-image-overlay">
           <div id="bannerText">
