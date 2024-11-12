@@ -26,7 +26,6 @@ function App() {
       <Button text="See all Treatments" onClick={() => alert("Book Now")} />
       <div style={{ padding: "20px" }}>
         <ImageWithDescription
-          imageUrl="src/assets/images/cos1.jpg"
           altText="Sample Image"
           description={
             <>
