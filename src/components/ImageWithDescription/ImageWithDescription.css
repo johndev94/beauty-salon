@@ -29,3 +29,24 @@
      /* Ensures the description box takes up the full height */
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .image-with-description {
+        flex-direction: column;  /* Stack the image and description vertically on mobile */
+        align-items: center;     /* Center the content */
+    }
+
+    .image {
+        width: 100%;  /* Image takes full width on mobile */
+        margin-bottom: 15px;  /* Adjust bottom margin for better spacing */
+    }
+
+    .description {
+        width: 100%;  /* Description takes full width on mobile */
+        margin-top: 15px;  /* Adjust top margin */
+        padding: 1em;  /* Reduce padding for better spacing on smaller screens */
+        font-size: 1em;  /* Adjust font size for mobile */
+        border-left: none;  /* Remove left border to avoid overlap */
+        border-top: 15px solid #93731f;  /* Add a top border instead for visual separation */
+    }
+}

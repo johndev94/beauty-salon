@@ -1,7 +1,7 @@
 .multi-panels {
     display: flex;                    /* Use flexbox to align items horizontally */
     justify-content: space-between;    /* Space panels evenly */
-    gap: 20px;                         /* Optional: adds space between the panels */
+    gap: 20px;                         /* Adds space between the panels */
     flex-wrap: wrap;                   /* Allow panels to wrap on smaller screens */
     margin: 0 auto;                    /* Center the multi-panels container */
 }
@@ -10,7 +10,6 @@
     flex: 1 1 30%;                     /* Each panel takes 30% of the container's width */
     box-sizing: border-box;            /* Include padding in the width calculation */
     padding: 20px;
-
     text-align: center;                /* Center text inside the panels */
     display: flex;                     /* Use flex to align the image and text inside */
     flex-direction: column;            /* Stack the image and text vertically */
@@ -20,15 +19,37 @@
 .panel img {
     width: 100%;                       /* Ensure the image takes the full width of the panel */
     height: auto;                      /* Maintain the aspect ratio */
-    max-width: 100%;                /* Prevent image from growing larger than the container */
+    max-width: 100%;                    /* Prevent image from growing larger than the container */
 }
 
 .panel h2 {
-    font-family: 'Barlow Condensed',sans-serif; 
-    width: 100%;                       /* Ensure the image takes the full width of the panel */
+    font-family: 'Barlow Condensed', sans-serif; 
+    width: 100%;                       /* Ensure the title takes the full width */
     height: auto;                      /* Maintain the aspect ratio */
     max-width: 100%;  
     color: black;
-    font-weight:300;
-                    /* Prevent image from growing larger than the container */
+    font-weight: 300;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .multi-panels {
+        flex-direction: column;        /* Stack panels vertically on mobile */
+        align-items: center;           /* Center the panels */
+        gap: 15px;                     /* Adjust space between panels */
+    }
+
+    .panel {
+        flex: 1 1 100%;                /* Make each panel take full width on mobile */
+        padding: 10px;                 /* Reduce padding on smaller screens */
+    }
+
+    .panel img {
+        width: 90%;                    /* Image takes up 90% of the panel's width on mobile */
+        margin-bottom: 10px;           /* Add margin between image and title */
+    }
+
+    .panel h2 {
+        font-size: 1.2em;               /* Adjust font size for mobile */
+    }
 }

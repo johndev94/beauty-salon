@@ -1,29 +1,52 @@
 .map-with-description {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    height: 700px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 700px;
+  /* Adjusting height to be flexible for mobile view */
+}
+
+.map-container {
+  width: 50%; 
+  height: 100%; /* Adjusts the height to fill the parent container */
+}
+
+.description {
+  margin-top: 30px;
+  width: 50%; /* Takes up the other half of the width */
+  padding: 2em;
+  height: 550px;
+  font-size: 1.2em;
+  color: #333;
+  display: flex;
+  align-items: center; /* Centers the content vertically */
+  justify-content: center; /* Centers the content horizontally */
+  text-align: center; /* Ensures text inside is centered horizontally */
+  background-color: rgb(244, 244, 244);
+  border-left: 15px solid #93731f;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .map-with-description {
+      flex-direction: column;  /* Stack the map and description vertically on mobile */
+      height: auto; /* Adjust height to auto for responsiveness */
   }
-  
+
   .map-container {
-    width: 50%; 
-    height: 100%; /* Adjusts the height to fill the parent container */
+      width: 100%;  /* Map takes full width on mobile */
+      height: 300px;  /* Adjust the height for better mobile view */
   }
-  
+
   .description {
-    margin-top: 30px;
-    width: 50%; /* Takes up the other half of the width */
-    padding: 2em;
-    height: 550px;
-    font-size: 1.2em;
-    color: #333;
-    display: flex;
-    align-items: center; /* Centers the content vertically */
-    justify-content: center; /* Centers the content horizontally */
-    text-align: center; /* Ensures text inside is centered horizontally */
-    background-color: rgb(244, 244, 244);
-    border-left: 15px solid #93731f;
-    font-family: 'Source Sans Pro', sans-serif;
+      width: 100%;  /* Description takes full width on mobile */
+      margin-top: 15px;  /* Adjust margin for better spacing */
+      padding: 1.5em;  /* Reduce padding for mobile */
+      font-size: 1em;  /* Adjust font size for mobile */
+      height: auto;  /* Adjust height to fit content */
+      border-left: none;  /* Remove left border on mobile */
+      border-top: 15px solid #93731f;  /* Add a top border for visual separation */
   }
-  
+}

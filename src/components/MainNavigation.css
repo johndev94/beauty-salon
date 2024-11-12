@@ -1,193 +1,125 @@
-@charset "utf-8";:root{--primary-color:#e5c570}
+@charset "utf-8";
+:root {
+  --primary-color: #e5c570;
+}
 
-
-body img{border:none}
-
-
-
-
+body img {
+  border: none;
+}
 
 #dropdownnav {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 1000;
-    display:contents;
-    justify-content: space-between; /* Space between the items */
-    align-items: center;           /* Vertically center the items */
-    height: 150px;                 /* Set a fixed height for the navbar */
-    padding: 0;               /* Add padding for some spacing around the content */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  padding: 0;
 }
 
+/* Burger Menu Styles */
+.burger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+}
 
+.burger-line {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+}
 
+/* Desktop Styles */
+#dropdownnav .logo {
+  height: 6em;
+  padding: 1.5em;
+  margin-right: auto;
+  margin-left: 35px;
+  will-change: filter;
+  transition: filter 300ms;
+}
 
 #dropdownnav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: flex-end; /* Aligns the ul contents to the right */
-    
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-
-#dropdownnav #number {
-    color: #93731f; /* Example color for the phone number */
-    font-weight: 400; /* Make the number bold */
-    text-decoration: none; /* Remove underline */
-
-}
-
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    margin-right: auto; /* Pushes the logo to the left within the ul */
-    margin-left: 35px;
-    will-change: filter;
-    transition: filter 300ms;
-    /* transform: scaleX(-1); */
-}
-
-
 
 #dropdownnav ul li {
-    margin: 0 15px; /* Add space between the links */
-    align-items: right;
+  margin: 0 15px;
 }
 
 #dropdownnav ul li a {
-    padding: 10px 15px;
-    color: #333;
-    font-size: 18px;
-    font-weight: 300;
-    text-decoration: none;
-    text-transform: none;
+  padding: 10px 15px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: none;
 }
 
 #dropdownnav ul li a:hover {
-    color: var(--primary-color); /* Adjust hover color as needed */
+  color: var(--primary-color);
 }
 
-#dropdownnav ul ul {
-    display: none !important;
+/* For Mobile - Show Burger Menu */
+@media (max-width: 768px) {
+  #dropdownnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #dropdownnav ul {
+    display: none; /* Hide the menu items by default */
+    flex-direction: column; /* Stack the items vertically */
+    width: 100%;
+    background-color: #fff;
     position: absolute;
     top: 100%;
     left: 0;
-    background: #fff;
-    padding: 0;
-    z-index: 10;
-}
+    z-index: 1000;
+    padding: 10px 0;
+  }
 
-#dropdownnav ul ul li {
-    width: 200px;
-    height: auto;
-    float: left;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    list-style-type: none;
-    position: relative;
-    border: 1px solid #d5d5d5;
-}
-
-#dropdownnav ul ul li a, 
-#dropdownnav ul ul li a:link, 
-#dropdownnav ul ul li a:visited {
-    width: 88%;
-    height: auto;
-    background: #fff;
-    border: none;
-    float: left;
-    text-align: left;
-    margin: 0;
-    padding: 10px 5%;
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: capitalize;
-    text-decoration: none;
-    border-left: 4px solid #fff;
-}
-
-#dropdownnav ul ul li a:hover {
-    width: 88%;
-    height: auto;
-    background: #fff;
-    border: none;
-    float: left;
-    text-align: left;
-    margin: 0;
-    padding: 10px 5%;
-    color: #333;
-    font-weight: 500;
-    text-transform: capitalize;
-    text-decoration: none;
-    border-left: 4px solid var(--primary-color);
-}
-
-#dropdownnav ul ul ul {
-    top: 0;
-    left: 100%;
-}
-
-#dropdownnav ul li:hover > ul {
-    display: block;
-}
-
-#dropdownnav ul li span {
-    color: #93731f;
-    font-weight: 500;
-}
-
-
-/* For making line appear on hover */
-nav.stroke ul li a,
-nav.fill ul li a {
-    position: relative;
-}
-
-nav.stroke ul li a:after,
-nav.fill ul li a:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0%;
-    content: '.';
-    color: transparent;
-    background: var(--primary-color);
-    height: 1px;
-}
-
-nav.stroke ul li a:hover:after {
+  #dropdownnav ul li {
     width: 100%;
+    text-align: center;
+  }
+
+  .burger-menu {
+    display: flex; /* Show the burger icon on small screens */
+  }
+
+  #dropdownnav ul li a {
+    padding: 10px 20px; /* Adjust padding for better touch interaction */
+    font-size: 16px; /* Adjust font size */
+  }
+
+  #dropdownnav ul li a:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+  }
+
+  /* Show menu when active */
+  #dropdownnav.active ul {
+    display: flex; /* Show the menu when 'active' class is added */
+  }
+
+  #dropdownnav ul ul {
+    display: block; /* Make submenus visible */
+    position: relative;
+  }
 }
-
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-    transition: all .4s;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}#cookie-bar{background:#c1c1c1;height:auto;font-family:'Roboto',sans-serif;font-size:14px;line-height:24px;color:#333;text-align:center;padding:10px 0;z-index:10000}#cookie-bar.fixed{position:fixed;top:0;left:0;width:100%}#cookie-bar.fixed.bottom{bottom:0;top:auto}#cookie-bar p{margin:0;padding:0}#cookie-bar a{color:#fff;display:inline-block;border-radius:2px;text-decoration:none;padding:4px 8px;margin-left:8px}#cookie-bar .cb-enable{background:var(--primary-color);opacity:1;font-weight:700;transition:opacity .25s ease-in-out;-moz-transition:opacity .25s ease-in-out;-webkit-transition:opacity .25s ease-in-out;cursor:pointer}#cookie-bar .cb-enable:hover{opacity:.4}#cookie-bar .cb-disable{background:#900}#cookie-bar .cb-disable:hover{background:#b00}#cookie-bar .cb-policy{background:#000;opacity:1;transition:opacity .25s ease-in-out;-moz-transition:opacity .25s ease-in-out;-webkit-transition:opacity .25s ease-in-out;cursor:pointer}#cookie-bar .cb-policy:hover{opacity:.4}};
