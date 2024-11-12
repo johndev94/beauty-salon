@@ -1,8 +1,6 @@
-import { useState } from "react";
 import MainNavigation from "./components/MainNavigation";
 import "./App.css";
 import CoverImage from "./components/CoverImage";
-import coverImage from "./assets/images/cover.jpg";
 import MultiPanels from "./components/MultiPanels";
 import Button from "./components/button/button";
 import ImageWithDescription from "./components/ImageWithDescription/ImageWithDescription";

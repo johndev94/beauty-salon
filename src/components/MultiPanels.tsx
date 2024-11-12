@@ -18,7 +18,7 @@ const Panel: React.FC<PanelProps> = ({ image, title, content }) => {
 };
 
 const MultiPanels: React.FC = () => {
-    const [panels, setPanels] = useState<PanelProps[]>([
+    const [panels] = useState<PanelProps[]>([
         { title: 'Facial Treatments', content: '', image: 'src/assets/images/cos1.jpg' },
         { title: 'Injectables & Enhancements', content: '', image: 'src/assets/images/cos3.jpg' },
         { title: 'Skin Health & Rejuvenation', content: '', image: 'src/assets/images/cos2.jpg' },
