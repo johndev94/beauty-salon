@@ -1,13 +1,10 @@
-import { useState } from "react";
 import MainNavigation from "./components/MainNavigation";
 import "./App.css";
 import CoverImage from "./components/CoverImage";
-import coverImage from "./assets/images/cover.jpg";
 import MultiPanels from "./components/MultiPanels";
 import Button from "./components/button/button";
 import ImageWithDescription from "./components/ImageWithDescription/ImageWithDescription";
-import MapComponent from "./components/map/map";
-import MapDesc from "./components/mapWithDescription/mapDesc";
+import MapWithDescription from "./components/mapWithDescription/mapDesc";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -44,23 +41,8 @@ function App() {
           }
         />
       </div>
-      <Button text="Book Now" onClick={() => alert("Book Now")} />
-      <MapDesc
-        lat={53.35014}
-        lng={2}
-        description={
-          <>
-            <h2>Call Us On:</h2>{" "}
-            <p>
-              +44 (0)28 3026 7606 <br></br>Opening Times <br></br>Monday:
-              9am-5pm <br></br>Tuesday: 9am-5.30pm <br></br>Wednesday: 9am-6pm{" "}
-              <br></br>Thursday: 9am-8pm <br></br>Friday: 9am-8pm
-              <br></br>Saturday: 9am-4.30pm <br></br>Sunday: Closed
-            </p>
-          </>
-        }
-      />
-      <Footer />
+      <MapWithDescription lat={2} lng={2} description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+      <Footer/>
     </>
   );
 }

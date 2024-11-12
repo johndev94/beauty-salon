@@ -1,23 +1,21 @@
 .map-with-description {
     display: flex;
-    width: 100%;
-    height: 100%; /* Allows container to take up available height */
-    align-items: stretch; /* Makes child elements fill the container height */
+    align-items: flex-start;
     margin-top: 100px;
+    margin-bottom: 100px;
+    height: 700px;
   }
   
   .map-container {
-    width: 50%; /* Takes up half the width */
-    height: auto; /* Ensures the aspect ratio is maintained */
-    object-fit: cover; /* Ensures the image fills its container without distortion */
-    margin-bottom: 30px;
-    
+    width: 50%; 
+    height: 100%; /* Adjusts the height to fill the parent container */
   }
   
   .description {
     margin-top: 30px;
     width: 50%; /* Takes up the other half of the width */
     padding: 2em;
+    height: 550px;
     font-size: 1.2em;
     color: #333;
     display: flex;
@@ -27,18 +25,5 @@
     background-color: rgb(244, 244, 244);
     border-left: 15px solid #93731f;
     font-family: 'Source Sans Pro', sans-serif;
-  }
-  
-
-  h2{
-    
-        font-size: 25px;
-        text-align: left;
-        text-transform: uppercase;
-        margin: 0;
-        font-family: 'Source Sans Pro', sans-serif;
-        color: var(--primary-color);
-        font-weight: 600;
-        align-items: center;
   }
   

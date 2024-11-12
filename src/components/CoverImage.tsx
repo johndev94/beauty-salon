@@ -10,8 +10,7 @@ interface CoverImageProps {
 
 const CoverImage: React.FC<CoverImageProps> = ({
   imageSrc,
-  altText,
-  children,
+  altText
 }) => {
   return (
     <>

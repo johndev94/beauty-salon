@@ -1,12 +1,9 @@
-@import 'leaflet/dist/leaflet.css';
-
 #root {
   max-width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-
 body{margin:0;padding:0;text-align:left;background:#fff}
 
 .logo:hover {

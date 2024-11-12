@@ -1,16 +1,20 @@
 import React from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
-import "./MapDesc.css";
+import "./mapDesc.css";
 
-interface MapDescProps {
+interface MapWithDescriptionProps {
   lat: number; // Latitude for the map location
   lng: number; // Longitude for the map location
   description: React.ReactNode;
 }
 
-const MapDesc: React.FC<MapDescProps> = ({ lat, lng, description }) => {
+const MapWithDescription: React.FC<MapWithDescriptionProps> = ({
+  lat,
+  lng,
+  description,
+}) => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "", // Replace with your Google Maps API key
+    googleMapsApiKey: "YOUR_GOOGLE_MAPS_API_KEY", // Replace with your Google Maps API key
   });
 
   if (!isLoaded) {
@@ -21,7 +25,7 @@ const MapDesc: React.FC<MapDescProps> = ({ lat, lng, description }) => {
     <div className="map-with-description">
       <div className="map-container">
         <GoogleMap
-          mapContainerStyle={{ width: "100%", height: "500px" }}
+          mapContainerStyle={{ width: "100%", height: "600px" }}
           center={{ lat, lng }}
           zoom={12}
         >
@@ -35,4 +39,4 @@ const MapDesc: React.FC<MapDescProps> = ({ lat, lng, description }) => {
   );
 };
 
-export default MapDesc;
+export default MapWithDescription;
