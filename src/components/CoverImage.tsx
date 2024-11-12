@@ -18,7 +18,9 @@ const CoverImage: React.FC<CoverImageProps> = ({ altText }) => {
         <div className="cover-image-overlay">
           <div id="bannerText">
             <h1>{altText}</h1>
-            <Button text="Book Now" onClick={() => alert("Book Now")} />
+            <div className="button-container">
+              <Button text="Book Now" onClick={() => alert("Book Now")} />
+            </div>
           </div>
         </div>
       </div>

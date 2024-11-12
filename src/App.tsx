@@ -20,7 +20,10 @@ function App() {
         alt="Banner border"
       />
       <MultiPanels />
-      <Button text="See all Treatments" onClick={() => alert("Book Now")} />
+      <div className="button-container">
+        <Button text="See all Treatments" onClick={() => alert("Book Now")} />
+      </div>
+
       <div style={{ padding: "20px" }}>
         <ImageWithDescription
           altText="Sample Image"
