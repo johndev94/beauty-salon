@@ -1,12 +1,19 @@
-@charset "utf-8";
+/* General Styles */
 :root {
   --primary-color: #e5c570;
 }
 
-body img {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+img {
   border: none;
 }
 
+/* Navigation Styles */
 #dropdownnav {
   width: 100%;
   margin: 0;
@@ -20,12 +27,10 @@ body img {
   justify-content: space-between;
   align-items: center;
   height: 150px;
-  padding: 0;
 }
 
-/* Burger Menu Styles */
 .burger-menu {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   margin-right: 20px;
@@ -38,13 +43,10 @@ body img {
   margin: 5px 0;
 }
 
-/* Desktop Styles */
 #dropdownnav .logo {
   height: 6em;
   padding: 1.5em;
-  margin-right: auto;
   margin-left: 35px;
-  will-change: filter;
   transition: filter 300ms;
 }
 
@@ -62,64 +64,73 @@ body img {
 }
 
 #dropdownnav ul li a {
-  padding: 10px 15px;
   color: #333;
   font-size: 18px;
   font-weight: 300;
   text-decoration: none;
-  text-transform: none;
+  padding: 10px 15px;
 }
 
 #dropdownnav ul li a:hover {
   color: var(--primary-color);
 }
 
-/* For Mobile - Show Burger Menu */
 @media (max-width: 768px) {
   #dropdownnav {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .burger-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   #dropdownnav ul {
-    display: none; /* Hide the menu items by default */
-    flex-direction: column; /* Stack the items vertically */
+    display: none;
+    flex-direction: column;
     width: 100%;
     background-color: #fff;
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1000;
     padding: 10px 0;
   }
 
+  #dropdownnav.active ul {
+    display: flex;
+  }
+
   #dropdownnav ul li {
-    width: 100%;
     text-align: center;
   }
+}
 
-  .burger-menu {
-    display: flex; /* Show the burger icon on small screens */
-  }
+/* Cover Image Styles */
+.cover-bottom-border {
+  display: block;
+  margin: 0 auto;
+}
 
-  #dropdownnav ul li a {
-    padding: 10px 20px; /* Adjust padding for better touch interaction */
-    font-size: 16px; /* Adjust font size */
-  }
+/* Multi Panels Styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 
-  #dropdownnav ul li a:hover {
-    background-color: #f1f1f1;
-    color: var(--primary-color);
-  }
+/* Image with Description */
+.image-with-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
 
-  /* Show menu when active */
-  #dropdownnav.active ul {
-    display: flex; /* Show the menu when 'active' class is added */
-  }
-
-  #dropdownnav ul ul {
-    display: block; /* Make submenus visible */
-    position: relative;
-  }
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }

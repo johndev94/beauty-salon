@@ -1,30 +1,45 @@
 import React, { useState } from "react";
 import "./MainNavigation.css";
 import icon from "../assets/images/logo.png"; // Adjust path as necessary
+import { Link } from "react-router-dom";
 
 const MainNavigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Toggle the menu visibility
   const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
+    setIsMenuOpen((prevState) => !prevState);
   };
 
   return (
-    <nav id="dropdownnav" className={`stroke ${isMenuOpen ? 'active' : ''}`}>
+    <nav id="dropdownnav" className={`stroke ${isMenuOpen ? "active" : ""}`}>
       <div className="burger-menu" onClick={toggleMenu}>
         <span className="burger-line"></span>
         <span className="burger-line"></span>
         <span className="burger-line"></span>
       </div>
       <img className="logo" src={icon} alt="Logo" />
-      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about-us">Team</a></li>
-        <li><a href="/treatments">Treatments</a></li>
-        <li><a href="/gift-vouchers">Gift Vouchers</a></li>
-        <li><a href="/contact-us">Contact Us</a></li>
-        <li><a href="http://phore.st/X3gQd">Online Store</a></li>
+      <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about-us">Team</Link>
+        </li>
+        <li>
+          <Link to="/treatments">Treatments</Link>
+        </li>
+        <li>
+          <Link to="/gift-vouchers">Gift Vouchers</Link>
+        </li>
+        <li>
+          <Link to="/contact-us">Contact Us</Link>
+        </li>
+        <li>
+          <a href="http://phore.st/X3gQd" target="_blank" rel="noopener noreferrer">
+            Online Store
+          </a>
+        </li>
         <li>
           Tel:{" "}
           <a id="number" href="tel:+3538313713788">
