@@ -1,0 +1,2 @@
+Create database: node setupDatabase.js
+Start Express server: npode server.js

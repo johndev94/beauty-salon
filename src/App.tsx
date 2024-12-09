@@ -10,6 +10,8 @@ import border from "./assets/images/banner-border.png";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Team from "./components/pages/Team";
+import Treatments from "./components/pages/Treatments";
+import Login from "./components/pages/Login";
 
 function App() {
   return (
@@ -32,6 +34,39 @@ function App() {
             <>
               <MainNavigation />
               <Team />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Treatments Route */}
+        <Route
+          path="/treatments"
+          element={
+            <>
+              <MainNavigation />
+              <Treatments />
+              <Footer />
+            </>
+          }
+        />
+        {/* Voucher Route */}
+        <Route
+          path="/voucher"
+          element={
+            <>
+              <MainNavigation />
+              <Footer />
+            </>
+          }
+        />
+        {/* Login Route */}
+        <Route
+          path="/login"
+          element={
+            <>
+              <MainNavigation />
+              <Login />
               <Footer />
             </>
           }
