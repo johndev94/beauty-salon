@@ -12,6 +12,7 @@ import Home from "./components/pages/Home";
 import Team from "./components/pages/Team";
 import Treatments from "./components/pages/Treatments";
 import Login from "./components/pages/Login";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (
@@ -56,6 +57,17 @@ function App() {
           element={
             <>
               <MainNavigation />
+              <Footer />
+            </>
+          }
+        />
+        {/* Contact Route */}
+        <Route
+          path="/contact-us"
+          element={
+            <>
+              <MainNavigation />
+              <Contact />
               <Footer />
             </>
           }
