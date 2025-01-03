@@ -36,11 +36,6 @@ const MainNavigation: React.FC = () => {
           <Link to="/contact-us">Contact Us</Link>
         </li>
         <li>
-          <a href="http://phore.st/X3gQd" target="_blank" rel="noopener noreferrer">
-            Online Store
-          </a>
-        </li>
-        <li>
           Tel:{" "}
           <a id="number" href="tel:+3538313713788">
             +353 (0) 83 137 13788
