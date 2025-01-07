@@ -26,3 +26,15 @@ app.get('/api/treatments', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+import * as bcrypt from 'bcrypt';
+
+const saltRounds = 10;
+
+function generatePasswordHash(password) {
+    const salt = bcrypt.genSaltSync(saltRounds);
+    const hash = bcrypt.hashSync(password, salt);
+    return hash;
+}
+
+console.log(generatePasswordHash('password123'));
