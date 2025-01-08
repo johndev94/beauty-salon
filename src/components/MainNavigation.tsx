@@ -30,9 +30,6 @@ const MainNavigation: React.FC = () => {
           <Link to="/treatments">Treatments</Link>
         </li>
         <li>
-          <Link to="/gift-vouchers">Gift Vouchers</Link>
-        </li>
-        <li>
           <Link to="/contact-us">Contact Us</Link>
         </li>
         <li>

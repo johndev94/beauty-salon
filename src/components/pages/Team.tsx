@@ -4,31 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Team: React.FC = () => {
   const teamMembers = [
     {
-      name: "Sophia Taylor",
+      name: "Siobhan Durkin",
       role: "Skincare Specialist",
-      bio: "Sophia has over 10 years of experience helping clients achieve radiant and healthy skin through personalized care.",
-      image: "https://via.placeholder.com/150", // Replace with actual image URLs
-      instagram: "https://www.instagram.com/sophiaskincare",
-      facebook: "https://www.facebook.com/sophiaskincare",
-      email: "sophia@example.com",
-    },
-    {
-      name: "Emily Johnson",
-      role: "Makeup Artist",
-      bio: "Emily is a professional makeup artist known for creating stunning looks for every occasion, from weddings to fashion shows.",
+      bio: "Siobhan has years of experience helping clients achieve radiant and healthy skin through personalized care.",
       image: "https://via.placeholder.com/150",
-      instagram: "https://www.instagram.com/emilymakeup",
-      facebook: "https://www.facebook.com/emilymakeup",
-      email: "emily@example.com",
-    },
-    {
-      name: "Liam Brown",
-      role: "Haircare Expert",
-      bio: "Liam is passionate about crafting hairstyles that bring out the best in every client, specializing in color treatments and styling.",
-      image: "https://via.placeholder.com/150",
-      instagram: "https://www.instagram.com/liamhaircare",
-      facebook: "https://www.facebook.com/liamhaircare",
-      email: "liam@example.com",
+      instagram: "https://www.instagram.com",
+      facebook: "https://www.facebook.com/profile.php?id=61567629880055",
+      email: "siobhan@example.com",
     },
   ];
 
@@ -40,9 +22,13 @@ const Team: React.FC = () => {
         of you. Whether it’s skincare, makeup, or haircare, we have the
         expertise to cater to your needs.
       </p>
-      <div className="row">
+      <div className="row justify-content-center">
         {teamMembers.map((member, index) => (
-          <div className="col-md-4 mb-4" key={index}>
+          <div
+            className="col-md-4 mb-4"
+            key={index}
+            style={{ alignSelf: "center" }}
+          >
             <div className="card h-100 shadow-sm">
               <img
                 src={member.image}

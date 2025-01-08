@@ -8,7 +8,11 @@ import ImageWithDescription from "../ImageWithDescription/ImageWithDescription";
 import MapWithDescription from "../mapWithDescription/mapDesc";
 import Footer from "../footer/Footer";
 
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <MainNavigation />
@@ -22,7 +26,10 @@ const Home: React.FC = () => {
       />
       <MultiPanels />
       <div className="button-container">
-        <Button text="See all Treatments" onClick={() => alert("Book Now")} />
+        <Button
+          text="See all Treatments"
+          onClick={() => navigate("/treatments")}
+        />
       </div>
       <div style={{ padding: "20px" }}>
         <ImageWithDescription
