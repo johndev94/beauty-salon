@@ -1,52 +1,46 @@
 .image-with-description {
-    display: flex;
-    width: 100%;
-    height: 100%; /* Allows container to take up available height */
-    align-items: stretch; /* Makes child elements fill the container height */
+    display: flex; /* Creates a horizontal flex container */
+    flex-direction: row; /* Ensures items are side by side */
+    width: 100%; /* Takes up full width of the parent */
     margin-top: 100px;
 }
 
 .image {
     width: 50%; /* Takes up half the width */
-    height: auto; /* Ensures the aspect ratio is maintained */
-    object-fit: cover; /* Ensures the image fills its container without distortion */
-    margin-bottom: 30px;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Prevents distortion */
 }
 
 .description {
-    margin-top: 30px;
     width: 50%; /* Takes up the other half of the width */
-    height: 100%;
     padding: 2em;
     font-size: 1.2em;
     color: #333;
     display: flex;
-    align-items: center; /* Centers the content vertically */
-    justify-content: space-between; /* Ensures the content takes up the full height */
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
     background-color: rgb(244, 244, 244);
     border-left: 15px solid #93731f;
     font-family: 'Source Sans Pro', sans-serif;
-     /* Ensures the description box takes up the full height */
 }
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .image-with-description {
-        flex-direction: column;  /* Stack the image and description vertically on mobile */
-        align-items: center;     /* Center the content */
+        flex-direction: column; /* Stacks the image and description vertically */
+        align-items: center;
     }
 
     .image {
-        width: 100%;  /* Image takes full width on mobile */
-        margin-bottom: 15px;  /* Adjust bottom margin for better spacing */
+        width: 100%; /* Makes the image full-width */
+        margin-bottom: 15px;
     }
 
     .description {
-        width: 100%;  /* Description takes full width on mobile */
-        margin-top: 15px;  /* Adjust top margin */
-        padding: 1em;  /* Reduce padding for better spacing on smaller screens */
-        font-size: 1em;  /* Adjust font size for mobile */
-        border-left: none;  /* Remove left border to avoid overlap */
-        border-top: 15px solid #93731f;  /* Add a top border instead for visual separation */
+        width: 100%; /* Makes the description full-width */
+        padding: 1em;
+        border-left: none; /* Removes the left border */
+        border-top: 15px solid #93731f; /* Adds a top border for separation */
+        font-size: 1em;
     }
 }
