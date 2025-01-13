@@ -3,8 +3,9 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  background:#f3f3f3
 }
-body{margin:0;padding:0;text-align:left;background:#fff}
+body{margin:0;padding:0;text-align:left;background:#8e8e8e}
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);

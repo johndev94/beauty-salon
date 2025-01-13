@@ -19,7 +19,7 @@
     display: flex;
     align-items: center; /* Centers text vertically */
     justify-content: center; /* Centers text horizontally */
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(219, 219, 219);
     border-left: 15px solid #93731f;
     font-family: 'Source Sans Pro', sans-serif;
 }

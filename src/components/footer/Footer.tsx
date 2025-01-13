@@ -4,6 +4,7 @@ import "./Footer.css";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
+      <br></br>
       <div className="footer-content">
         <h3>Nurse Siobhan’s Skin Studio </h3>
         <p id="moto">Transforming Skin, Elevating Confidence.</p>
@@ -27,6 +28,7 @@ const Footer: React.FC = () => {
           &copy; {new Date().getFullYear()} Your Company. All rights reserved.
         </p>
       </div>
+      
     </footer>
   );
 };
