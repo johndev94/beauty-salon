@@ -94,6 +94,17 @@ app.delete("/api/treatments/:id", (req, res) => {
   });
 });
 
+// API route to fetch all users
+app.get("/api/login", (req, res) => {
+  db.all("SELECT * FROM users", [], (err, rows) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+      return;
+    }
+    res.json(rows);
+  });
+});
+
 // API route to register a user
 app.post("/api/register", (req, res) => {
   const { email, password } = req.body;
