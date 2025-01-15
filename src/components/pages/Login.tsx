@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import bcrypt from "bcryptjs"; // Use import for bcryptjs
+import { useAuth } from "./AuthContext"; // Import the AuthContext
 
-import bcrypt from "bcryptjs";  // Use import for bcryptjs
-var salt = bcrypt.genSaltSync(10);
+const salt = bcrypt.genSaltSync(10);
 
 interface User {
-  id: number; // Ensure this matches your database schema
+  id: number;
   email: string;
   password: string;
 }
 
 const Login: React.FC = () => {
+  const { login } = useAuth(); // Get login function from context
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [password, setPassword] = useState("");
@@ -46,6 +48,7 @@ const Login: React.FC = () => {
       setMessage("Invalid password");
     } else {
       setMessage("Login successful");
+      login(); // Call the login function from the AuthContext
     }
   };
 

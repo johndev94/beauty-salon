@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap"; // Using Button from Bootstrap
 
 const GetTreatments: React.FC = () => {
-  const [treatments, setTreatments] = useState<
-    { name: string; price: string }[]
-  >([]);
+  const [treatments, setTreatments] = useState<{ name: string; price: string; image: string }[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -26,24 +25,21 @@ const GetTreatments: React.FC = () => {
   }
 
   return (
-    <div className="container mt-5">
-      <div className="card">
-        <div className="card-header text-center">
-          <h2>Price List</h2>
-        </div>
-        <div className="card-body">
-          <ul className="list-group">
-            {treatments.map((treatment, index) => (
-              <li
-                key={index}
-                className="list-group-item d-flex justify-content-between align-items-center"
-              >
-                {treatment.name}
-                <span className="badge bg-success">{treatment.price}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className="treatments-page">
+      {/* Treatments List */}
+      <div className="treatments-list container mt-5">
+        <ul className="list-unstyled">
+          {treatments.map((treatment, index) => (
+            <li key={index} className="treatment-item">
+              <div className="treatment-card">
+                <div className="treatment-content">
+                  <h3 className="treatment-name">{treatment.name}</h3>
+                  <h5 className="treatment-price">{treatment.price}</h5>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

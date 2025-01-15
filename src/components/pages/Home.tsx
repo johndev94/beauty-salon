@@ -7,6 +7,7 @@ import Button from "../button/button";
 import ImageWithDescription from "../ImageWithDescription/ImageWithDescription";
 import MapWithDescription from "../mapWithDescription/mapDesc";
 import Footer from "../footer/Footer";
+import cover from "../assets/images/cover.jpg";
 
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
@@ -15,8 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <MainNavigation />
-      <CoverImage altText="Book your appointment today" />
+      
       <img
         className="cover-bottom-border"
         src={border}

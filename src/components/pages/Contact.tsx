@@ -1,14 +1,23 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import border from "../../assets/images/banner-border.png";
 
 const Contact: React.FC = () => {
   return (
+<>
+    <img
+        className="cover-bottom-border"
+        src={border}
+        width="100%"
+        height="120"
+        alt="Banner border"
+      />
     <div className="container mt-5">
-      <h1 className="text-center mb-4">Contact Us</h1>
-      <p className="text-center mb-5">
+
+      <h3 className="text-center mb-5">
         We’d love to hear from you! Feel free to reach out using the form below
         or visit us at our location.
-      </p>
+      </h3>
       <div className="row">
         {/* Contact Form */}
         <div className="col-md-6 mb-4">
@@ -79,6 +88,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

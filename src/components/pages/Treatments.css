@@ -1,0 +1,81 @@
+.treatments-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .treatments-list {
+    margin-top: 50px;
+  }
+  
+  .treatment-item {
+    margin-bottom: 30px;
+  }
+  
+  .treatment-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .treatment-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .treatment-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .treatment-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .treatment-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    text-align: right;
+  }
+  
+  .book-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: auto;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background-color: #ff4e40;
+  }
+  
+  @media (max-width: 768px) {
+    .treatment-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .treatment-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .treatment-price {
+      margin-top: 10px;
+    }
+  }
+  

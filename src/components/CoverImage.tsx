@@ -7,24 +7,36 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate for naviga
 
 interface CoverImageProps {
   altText: string;
+  image: string;
+  button?: boolean;
+  buttonLink?: string; // Link for the button
   children?: React.ReactNode;
 }
 
-
-
-const CoverImage: React.FC<CoverImageProps> = ({ altText }) => {
+const CoverImage: React.FC<CoverImageProps> = ({ altText, image, button, buttonLink = "/contact-us" }) => {
   const navigate = useNavigate();
+
+  // Navigate only if buttonLink is defined and valid
+  const handleButtonClick = () => {
+    if (buttonLink) {
+      navigate(buttonLink);
+    }
+  };
+
   return (
     <>
       <div
         className="cover-image-container"
-        style={{ backgroundImage: `url(${cover})` }}
+        style={{ backgroundImage: `url(${image})` }}
       >
         <div className="cover-image-overlay">
           <div id="bannerText">
             <h1>{altText}</h1>
             <div className="button-container">
-              <Button text="Book Now" onClick={() => navigate("/contact-us")} />
+              {/* Conditionally render the button */}
+              {button && (
+                <Button text="Book Now" onClick={handleButtonClick} />
+              )}
             </div>
           </div>
         </div>
