@@ -13,6 +13,7 @@ import Team from "./components/pages/Team";
 import Treatments from "./components/pages/Treatments";
 import Login from "./components/pages/Login";
 import Contact from "./components/pages/Contact";
+import Admin from "./components/pages/Admin";
 
 function App() {
   return (
@@ -68,6 +69,17 @@ function App() {
             <>
               <MainNavigation />
               <Contact />
+              <Footer />
+            </>
+          }
+        />
+        {/* Admin Route */}
+        <Route
+          path="/admin"
+          element={
+            <>
+              <MainNavigation />
+              <Admin />
               <Footer />
             </>
           }

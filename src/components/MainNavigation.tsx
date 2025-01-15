@@ -33,6 +33,9 @@ const MainNavigation: React.FC = () => {
           <Link to="/contact-us">Contact Us</Link>
         </li>
         <li>
+          <Link to="/admin">Admin</Link>
+        </li>
+        <li>
           Tel:{" "}
           <a id="number" href="tel:+3538313713788">
             +353 (0) 83 137 13788
