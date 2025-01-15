@@ -9,7 +9,11 @@ const Footer: React.FC = () => {
         <h3>Nurse Siobhan’s Skin Studio </h3>
         <p id="moto">Transforming Skin, Elevating Confidence.</p>
         <div className="social-links">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.facebook.com/profile.php?id=61567629880055"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-facebook-f"></i>
           </a>
           <a href="#" target="_blank" rel="noopener noreferrer">
