@@ -1,5 +1,4 @@
 import React from "react";
-import GetTreatments from "../getTreatments/getTreatments";
 import EditTreatments from "../EditTreatments/editTreatments";
 
 const Admin: React.FC = () => {

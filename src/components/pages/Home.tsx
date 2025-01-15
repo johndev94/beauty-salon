@@ -1,13 +1,10 @@
 import React from "react";
-import MainNavigation from "../MainNavigation";
-import CoverImage from "../CoverImage";
 import border from "../../assets/images/banner-border.png";
 import MultiPanels from "../MultiPanels";
 import Button from "../button/button";
 import ImageWithDescription from "../ImageWithDescription/ImageWithDescription";
-import MapWithDescription from "../mapWithDescription/mapDesc";
 import Footer from "../footer/Footer";
-import cover from "../assets/images/cover.jpg";
+
 
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 

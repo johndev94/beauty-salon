@@ -1,7 +1,7 @@
 import React from "react";
 import "./CoverImage.css"; // Include your CSS file for styles
 import Button from "./button/button";
-import cover from "../assets/images/cover.jpg";
+
 
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 

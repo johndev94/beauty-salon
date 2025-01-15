@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap"; // Using Button from Bootstrap
+
 
 const GetTreatments: React.FC = () => {
   const [treatments, setTreatments] = useState<{ name: string; price: string; image: string }[]>([]);
