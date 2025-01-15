@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import bcrypt from "bcryptjs"; // Use import for bcryptjs
 import { useAuth } from "./AuthContext"; // Import the AuthContext
 
-
 interface User {
   id: number;
   email: string;

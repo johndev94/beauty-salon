@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "../pages/Treatments.css"; // Import the CSS file you just created
 
 const GetTreatments: React.FC = () => {
-  const [treatments, setTreatments] = useState<{ name: string; price: string; image: string }[]>([]);
+  const [treatments, setTreatments] = useState<
+    { name: string; price: string; image: string }[]
+  >([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch data from backend API
     fetch("http://localhost:5000/api/treatments")
       .then((response) => response.json())
       .then((data) => {
@@ -26,7 +27,6 @@ const GetTreatments: React.FC = () => {
 
   return (
     <div className="treatments-page">
-      {/* Treatments List */}
       <div className="treatments-list container mt-5">
         <ul className="list-unstyled">
           {treatments.map((treatment, index) => (
