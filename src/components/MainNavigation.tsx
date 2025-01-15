@@ -9,6 +9,7 @@ const MainNavigation: React.FC = () => {
   // Toggle the menu visibility
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
+    console.log("Menu toggled:", !isMenuOpen); // Debugging line
   };
 
   return (

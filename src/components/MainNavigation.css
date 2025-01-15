@@ -27,6 +27,7 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 150px;
+  position: relative;  /* Make sure the navigation stays on top of the content */
 }
 
 .burger-menu {
@@ -75,6 +76,7 @@ img {
   color: var(--primary-color);
 }
 
+/* For Mobile View */
 @media (max-width: 768px) {
   #dropdownnav {
     flex-wrap: wrap;
@@ -86,7 +88,7 @@ img {
   }
 
   #dropdownnav ul {
-    display: none;
+    display: none; /* Hide the menu by default */
     flex-direction: column;
     width: 100%;
     background-color: #fff;
@@ -94,14 +96,16 @@ img {
     top: 100%;
     left: 0;
     padding: 10px 0;
+    z-index: 999;
   }
 
   #dropdownnav.active ul {
-    display: flex;
+    display: flex; /* Show the menu when active */
   }
 
   #dropdownnav ul li {
     text-align: center;
+    padding: 10px 0;
   }
 }
 
